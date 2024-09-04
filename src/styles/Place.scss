@@ -1,0 +1,48 @@
+.place {
+    display: flex;
+    flex-direction: column;
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .titleLocation {
+
+                h1 {
+                    color: #FF6060
+                }
+            }
+
+            .host {
+                display: flex;
+                flex-direction: row;
+                width: 167px;
+                height: 64px;
+                white-space: break-space;
+
+                img {
+                    border-radius: 50%;
+                    height: 64px;
+                    width: 64px;
+                }
+
+            }
+
+            .tags {
+                display: flex;
+                justify-content: space-between;
+                column-gap: 10px;
+            }
+
+
+
+        }
+    }
+
+}
