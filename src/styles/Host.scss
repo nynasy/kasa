@@ -1,0 +1,18 @@
+.hostInfo {
+    display: flex;
+    flex-direction: row;
+    width: 167px;
+    height: 64px;
+    white-space: break-space;
+
+    p {
+        color: #FF6060
+      }
+
+    img {
+        border-radius: 50%;
+        height: 64px;
+        width: 64px;
+    }
+
+}

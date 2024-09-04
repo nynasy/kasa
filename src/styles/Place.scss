@@ -26,6 +26,10 @@
                 height: 64px;
                 white-space: break-space;
 
+                p {
+                    color: #FF6060
+                  }
+
                 img {
                     border-radius: 50%;
                     height: 64px;
@@ -40,9 +44,6 @@
                 column-gap: 10px;
             }
 
-
-
         }
-    }
-
+        }
 }

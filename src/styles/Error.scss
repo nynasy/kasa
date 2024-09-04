@@ -1,0 +1,18 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+
+    .errorCode{
+        color: #FF6060; 
+        font-size: 288px;
+        font-weight: 700px;
+        line-height: 410px;
+    }
+    .errorMessage{
+        color: #FF6060; 
+        
+    }
+}

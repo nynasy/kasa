@@ -1,0 +1,19 @@
+.collapse {
+
+    width: 582px;
+
+    .header {
+        background-color: #FF6060;
+        color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        height: 52px;
+    }
+
+    .content {
+        padding: 30px;
+        text-align: justify;
+
+    }
+}
