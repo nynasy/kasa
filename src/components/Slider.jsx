@@ -2,73 +2,45 @@ import PropTypes from "prop-types";
 import "../styles/Slider.scss"
 import arrowLeft from "../assets/arrow_left.png"
 import arrowRight from "../assets/arrow_right.png"
+import { useEffect, useState } from "react";
 
-function Slider(props) {
+export default function Slider(props) {
 
- // const pictures = props.pictures;
+  const pictures = props.pictures;
 
- const pictures = [
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-  "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg"
-]
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [numberOfSlides, setNumberOfSlides] = useState(0);
+  const [lastIndex, setLastIndex] = useState(0);
 
-  const numberOfSlides = pictures.length;  
-
-  let currentIndex = 0;	
-  let lastIndex = numberOfSlides - 1;
-
-
-
-  function previous() {
-    let nextIndex;  
-    if(currentIndex === 0){
-      nextIndex = lastIndex;
-    } else {
-      nextIndex = currentIndex - 1; 
-    }	
-    changeSlide(nextIndex);
+  function previous() {  
+    setCurrentIndex((currentIndex === 0) ? lastIndex : currentIndex - 1);    
   }
 
   function next() {
-    let nextIndex;
-    if(currentIndex === lastIndex){
-      nextIndex = 0;
-    } else {
-      nextIndex = currentIndex + 1; 
-    }	
-    changeSlide(nextIndex);
+    setCurrentIndex((currentIndex === lastIndex) ? 0 : currentIndex + 1);  
   }
 
-  function changeSlide(nextIndex){
-    let slideImage = document.getElementById("picture");
-    slideImage.setAttribute("src", pictures[nextIndex]);
+  useEffect(() => {  
+    setNumberOfSlides(pictures?.length);
+    setLastIndex(numberOfSlides - 1);    
+  }, [numberOfSlides, pictures]);
 
-    let page = document.getElementById("page");
-    page.innerHTML = (nextIndex + 1) + "/" +  numberOfSlides;
-    currentIndex = nextIndex;
-  }  
+  function currentPicture(){
+    return pictures?.find((_element, index) => index === currentIndex);
+  }
   
-  return (     
+  return (         
     <div className="images">
-      <img id="picture" className="picture" src={pictures[0]} alt="vue du logement" />       
-      <img id="arrow_left" className="arrow arrow_left" src={arrowLeft} alt="fleche gauche" onClick={previous}/>
-      <img id="arrow_right" className="arrow arrow_right" src={arrowRight} alt="fleche droite" onClick={next}/>		
-      <div id="page" class="page">
-          1/{numberOfSlides}
+      <img className="picture" src={currentPicture()} alt="vue du logement" />       
+      <img className="arrow arrow_left" src={arrowLeft} alt="fleche gauche" onClick={previous}/>
+      <img className="arrow arrow_right" src={arrowRight} alt="fleche droite" onClick={next}/>		
+      <div class="page">
+          {currentIndex + 1} / {numberOfSlides}
       </div>	     
-    </div>
-    
-  );
-
-  
-    
+    </div>    
+  );      
 }
   
-export default Slider;
-
 Slider.propTypes = {
   pictures: PropTypes.array
 }

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function Property(id) {
   console.log(id);
 
- const [json, setData] = useState("");
+ const [json, setData] = useState(id);
 
   useEffect(() => {
     fetch("http://localhost:8080/api/properties/" + id, {
