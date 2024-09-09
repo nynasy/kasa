@@ -1,6 +1,7 @@
-.place {
+.placeContainer {
     display: flex;
     flex-direction: column;
+    padding: 20px;   
 
     .details {
         display: flex;
@@ -13,27 +14,24 @@
             flex-direction: row;
 
             .titleLocation {
-
                 h1 {
-                    color: #FF6060
+                    color: var(--color-primary)
                 }
             }
 
             .host {
                 display: flex;
-                flex-direction: row;
-                width: 167px;
-                height: 64px;
+                flex-direction: row;          
                 white-space: break-space;
 
                 p {
-                    color: #FF6060
+                    color: var(--color-primary)
                   }
 
                 img {
                     border-radius: 50%;
                     height: 64px;
-                    width: 64px;
+                    width: auto;
                 }
 
             }
@@ -45,5 +43,5 @@
             }
 
         }
-        }
+    }
 }

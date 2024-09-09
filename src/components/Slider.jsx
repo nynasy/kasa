@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "../styles/Slider.scss"
+import "../styles/components/Slider.scss"
 import arrowLeft from "../assets/arrow_left.png"
 import arrowRight from "../assets/arrow_right.png"
 import { useEffect, useState } from "react";
@@ -30,7 +30,7 @@ export default function Slider(props) {
   }
   
   return (         
-    <div className="images">
+    <div className="place">
       <img className="picture" src={currentPicture()} alt="vue du logement" />       
       <img className="arrow arrow_left" src={arrowLeft} alt="fleche gauche" onClick={previous}/>
       <img className="arrow arrow_right" src={arrowRight} alt="fleche droite" onClick={next}/>		

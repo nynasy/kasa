@@ -1,11 +1,11 @@
-import styles from "../styles/Card.scss"
+import "../styles/components/Card.scss"
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 
 export default function Card(props) {
   return (
-    <Link className={styles.cardLink} to={`/place/${props.data.id}`} style={{ textDecoration: 'none' }}>
+    <Link className="cardLink" to={`/place/${props.data.id}`} >
       <div className="card">
         <img src={props.data.cover} alt={props.data.title} />
         <div className="title">

@@ -1,4 +1,4 @@
-import  "../styles/Layout.scss"
+import  "../styles/components/Layout.scss"
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 

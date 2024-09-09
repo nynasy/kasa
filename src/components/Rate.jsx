@@ -1,4 +1,4 @@
-import "../styles/Rate.scss"
+import "../styles/components/Rate.scss"
 
 
 function Rate(props) {

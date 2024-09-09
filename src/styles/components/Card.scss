@@ -1,28 +1,32 @@
 .cardLink {
-    text-decoration: 'none';
+    text-decoration: none;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #FF6060;
+    background-color: var(--color-primary);
     height: 340px;
     width: 320px;
     padding: 5px;
     border-radius: 10px;
 
     img {
-        width: 310px;
+        width: auto;
         height: 310px;
         object-fit: cover;
+
+        @media screen and (max-width: 480px) {     
+            
+        }
     }
 
     .title {
         color: white;
         height: 60px;
         padding-top: 10px;
-        padding-bottom: 5px;
+        padding-bottom: 5px;    
 
         p {
             font-size: 18px;

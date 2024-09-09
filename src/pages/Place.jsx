@@ -1,7 +1,7 @@
 import Tag from "../components/Tag";
 import Rate from "../components/Rate";
 
-import "../styles/Place.scss"
+import "../styles/pages/Place.scss"
 import Slider from "../components/Slider";
 import Collapse from "../components/Collapse";
 import { useParams } from "react-router-dom";
@@ -12,12 +12,12 @@ function Place() {
 
     const property = Property(id);
 
-   const host = property.host;
-   const firstName = host?.name?.split(" ")[0];
-   const lastName = host?.name?.split(" ")[1];
+    const host = property.host;
+    const firstName = host?.name?.split(" ")[0];
+    const lastName = host?.name?.split(" ")[1];
 
     return (
-      <div className="place">
+      <div className="placeContainer">
          <div className="slider">
             <Slider pictures={property?.pictures}/>
         </div>

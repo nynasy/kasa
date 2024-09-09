@@ -1,30 +1,26 @@
-import "../styles/About.scss"
+import "../styles/pages/About.scss"
+import aboutUs from "../data/about.json"
 import Banner from "../components/Banner";
 import bannerImg from "../assets/banner_about.png"
 import Collapse from "../components/Collapse";
+import { useState } from "react";
 
 
 function About() {
+
+    const [aboutData] = useState(aboutUs);
     return (
       <div className="about">
           <Banner img={bannerImg}/>
 
           <div className="collapses">
-              <Collapse label="Fiabilité">  
-                  <p>Fiabilité</p>                   
-              </Collapse>
 
-              <Collapse label="Respect">  
-                  <p>Respect</p>                   
-              </Collapse>
-
-              <Collapse label="Service">  
-                  <p>Service</p>                   
-              </Collapse>
-
-              <Collapse label="Sécurité">  
-                  <p>Sécurité</p>                   
-              </Collapse>
+              {aboutData?.map((item, index) =>                
+                    <Collapse key={index} label={item?.value}>  
+                        <p>{item?.description}</p>                   
+                    </Collapse>       
+                  )
+              }              
 
             </div>       
       </div>

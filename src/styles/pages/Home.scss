@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+
+
+  @media screen and (max-width: 480px) {    
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cards {     
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   
+    gap: 40px;  
+    width: 100%;
+ 
+  
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+  }
+
+}

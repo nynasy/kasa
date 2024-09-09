@@ -1,4 +1,4 @@
-import  "../styles/Banner.scss"
+import  "../styles/components/Banner.scss"
 
 
 export default function Banner(props) {
@@ -13,7 +13,7 @@ export default function Banner(props) {
             }} 
             alt="banniere"
         >
-            <h1>{props.title}</h1>             
+            <p><span>{props.title.split(",")[0]},</span><span>{props.title.split(",")[1]}</span></p>             
         </div>
     );
 }

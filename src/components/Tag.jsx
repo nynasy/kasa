@@ -1,4 +1,4 @@
-import "../styles/Tag.scss"
+import "../styles/components/Tag.scss"
 
 
 function Tag(props) {

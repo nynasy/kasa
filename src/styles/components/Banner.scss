@@ -1,0 +1,38 @@
+.banner {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 223px;
+    width: 100%;
+    border-radius: 20px;  
+
+    @media screen and (max-width: 480px) {     
+        height: 111px;
+    }
+    p {
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 68px;
+        text-align: center;         
+
+        @media screen and (max-width: 480px) {     
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;   
+            text-align: center;         
+        }
+
+        span {
+            @media screen and (max-width: 480px) {     
+                display: list-item;
+                word-break: break-word;
+                list-style-type: none;
+            }
+        } 
+    }
+}
