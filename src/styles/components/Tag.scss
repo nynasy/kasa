@@ -2,9 +2,25 @@
     background-color: var(--color-primary);
     color: white;
     border-radius: 10px;
-    width: 115px;
+    width: 150px;
     height: 25px;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    vertical-align: middle;
+
+    @media screen and (max-width: 480px) {
+        height: 18px;
+        width: 100px;
+    }
+  
+    p {       
+        text-wrap: nowrap;    
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;   
+
+        @media screen and (max-width: 480px) {
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
 }

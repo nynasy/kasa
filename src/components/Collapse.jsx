@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/components/Collapse.scss"
 
+
 function Collapse(props) {
     const [open, setOpen] = useState(false);
 

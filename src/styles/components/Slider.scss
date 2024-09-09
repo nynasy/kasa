@@ -1,11 +1,15 @@
-.place {
+.slider {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 470px;
+    min-height: 420px;
     position: relative;
+
+    @media screen and (max-width: 480px) {  
+        min-height: 300px;         
+    }
 
     .picture {
         width: 100%;
@@ -32,18 +36,11 @@
     }
 
     .arrow_left {
-        left: 10px;        
-        @media screen and (max-width: 480px) {
-                 
-        }
+        left: 10px;         
     }
 
     .arrow_right {
         right: 10px;
-
-        @media screen and (max-width: 480px) {
-          
-        }
     }
 
     .page {

@@ -30,7 +30,7 @@ export default function Slider(props) {
   }
   
   return (         
-    <div className="place">
+    <div className="slider">
       <img className="picture" src={currentPicture()} alt="vue du logement" />       
       <img className="arrow arrow_left" src={arrowLeft} alt="fleche gauche" onClick={previous}/>
       <img className="arrow arrow_right" src={arrowRight} alt="fleche droite" onClick={next}/>		

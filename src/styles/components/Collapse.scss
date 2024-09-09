@@ -1,19 +1,40 @@
 .collapse {
-
-    width: 582px;
+    width: 100%;
 
     .header {
+        display: flex;
+        justify-content: space-between;       
+        align-items: center;
+        
         background-color: var(--color-primary);
         color: white;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
+        border-radius: 10px;       
         height: 52px;
+        vertical-align: center;
+        padding: 10px;
+
+        
+        @media screen and (max-width: 480px) {
+            height: 30px;
+        }
+
+        .label {
+           
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 25px;
+
+            @media screen and (max-width: 480px) {
+                font-size: 13px;
+                line-height: 18px;  
+            }
+        }      
+        
+       
     }
 
     .content {
-        padding: 30px;
+        padding: 20px;
         text-align: justify;
-
     }
 }

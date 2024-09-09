@@ -18,44 +18,44 @@ function Place() {
 
     return (
       <div className="placeContainer">
-         <div className="slider">
+         <div className="sliderContainer">
             <Slider pictures={property?.pictures}/>
         </div>
 
         <div className="details">
           <div className="row">
-            <div className="titleLocation">
-              <h1>{property.title}</h1>
-              <p>{property.location}</p>
+            <div className="column left">
+              <div className="titleLocation">
+                <p className="title">{property.title}</p>
+                <p className="location">{property.location}</p>
+              </div>
+              <div className="tags">              
+                {property?.tags?.map((tag, index) =>               
+                  <Tag key={index} label={tag}/>              
+                  )
+                }  
+              </div>
             </div>
-            <div className="host">              
-              <p>{firstName}<br/>{lastName}</p>
-              <img src={host?.picture} alt="host" />        
-            </div>          
-          </div>
+
+            <div className="column right">
+              <div className="host">              
+                <p>{firstName}<br/>{lastName}</p>
+                <img src={host?.picture} alt="host" />        
+              </div>     
+              <div className="rate">
+                <Rate rate={property?.rating}/>        
+              </div>        
+            </div>             
+          </div>        
 
           <div className="row">
-            <div className="tags">              
-              {property?.tags?.map((tag, index) =>               
-                <Tag key={index} label={tag}/>              
-                )
-              }  
-            </div>
-            <div className="rate">
-              <Rate rate={property?.rating}/>        
-            </div>        
-          </div>
-
-          <div className="row">
-            <div className="description">
+            <div className="collapsable">
               <Collapse label="description">      
-                <p>
-                {property?.description}
-                </p>
+                <p>{property?.description}</p>
               </Collapse>              
             </div>
 
-            <div className="equipements">
+            <div className="collapsable">
               <Collapse label="equipement">     
                 {property?.equipments?.map((equipement) =>               
                   <p>{equipement}</p>           
