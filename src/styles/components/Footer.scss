@@ -6,8 +6,26 @@
     background-color: black;
     height: 209px;
 
-    p {
-        color: white;
+    @media screen and (max-width: 480px) {     
+        justify-content: center;
+        gap: 10px;
     }
 
+    p {
+        color: white;
+
+        span {
+            @media screen and (max-width: 480px) {     
+                display: list-item;
+                word-break: break-word;
+                list-style-type: none;
+            }
+        } 
+
+    }
+
+    
+       
+
 }
+
