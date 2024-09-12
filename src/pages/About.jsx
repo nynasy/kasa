@@ -7,8 +7,8 @@ import { useState } from "react";
 
 
 function About() {
-
     const [aboutData] = useState(aboutUs);
+    
     return (
       <div className="about">
           <Banner img={bannerImg}/>

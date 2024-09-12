@@ -4,7 +4,7 @@ import "../styles/components/Rate.scss"
 function Rate(props) {
     console.log(props.rate);
 
-    const displayRate = () => {
+    function displayRate() {
         let spans = [] 
         for(var i=1; i<=5; i++){
             console.log(i);

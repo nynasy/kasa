@@ -92,6 +92,9 @@
 
              .collapsable {
                 width: 48%;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 25px;
 
                 @media screen and (max-width: 480px) {
                     width: 100%;
