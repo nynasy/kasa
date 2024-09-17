@@ -50,13 +50,13 @@ function Place() {
 
           <div className="row">
             <div className="collapsable">
-              <Collapse label="description">      
+              <Collapse label="Description">      
                 <p>{property?.description}</p>
               </Collapse>              
             </div>
 
             <div className="collapsable">
-              <Collapse label="equipement">     
+              <Collapse label="Équipements">     
                 {property?.equipments?.map((equipement) =>               
                   <p>{equipement}</p>           
                   )
