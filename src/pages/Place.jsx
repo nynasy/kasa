@@ -5,7 +5,7 @@ import "../styles/pages/Place.scss"
 import Slider from "../components/Slider";
 import Collapse from "../components/Collapse";
 import { useParams } from "react-router-dom";
-import Property from "../components/Property";
+import Property from "../services/Property";
 
 function Place() {
     const { id } = useParams();
