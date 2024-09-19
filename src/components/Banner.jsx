@@ -13,7 +13,7 @@ export default function Banner(props) {
             }} 
             alt="banniere"
         >
-            <p><span>{props?.title?.split(",")[0]},</span><span>{props?.title?.split(",")[1]}</span></p>             
+            <p><span>{props?.title?.split(",")[0]?.concat(",")}</span><span>{props?.title?.split(",")[1]}</span></p>             
         </div>
     );
 }

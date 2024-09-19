@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Properties() {
  const [dataList, setData] = useState([]);
+ const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:8080/api/properties")
@@ -12,8 +14,11 @@ export default function Properties() {
       return response.json();
     })
     .then(data => setData(data))
-    .catch(error => console.error("Error when fetching properties :", error));
-  }, []);
+    .catch(error => {
+      console.error("Error when fetching properties :", error);
+      navigate("/error");
+  });
+  });
 
   return dataList;
 }

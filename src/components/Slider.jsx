@@ -34,7 +34,7 @@ export default function Slider(props) {
       <img className="picture" src={currentPicture()} alt="vue du logement" />         
       {(numberOfSlides > 1) && <img className="arrow arrow_left" src={arrowLeft} alt="flèche gauche" onClick={previous}/>}
       {(numberOfSlides > 1) && <img className="arrow arrow_right" src={arrowRight} alt="flèche droite" onClick={next}/>}
-      <div class="page">
+      <div className="page">
           {currentIndex + 1} / {numberOfSlides}
       </div>	     
     </div>    

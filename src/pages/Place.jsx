@@ -4,13 +4,17 @@ import Rate from "../components/Rate";
 import "../styles/pages/Place.scss"
 import Slider from "../components/Slider";
 import Collapse from "../components/Collapse";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Property from "../services/Property";
 
 function Place() {
     const { id } = useParams();
 
     const property = Property(id);
+
+    if(!property){
+      <Navigate to="/*" replace />;
+    }
 
     const host = property.host;
     const firstName = host?.name?.split(" ")[0];
@@ -57,8 +61,8 @@ function Place() {
 
             <div className="collapsable">
               <Collapse label="Équipements">     
-                {property?.equipments?.map((equipement) =>               
-                  <p>{equipement}</p>           
+                {property?.equipments?.map((equipement, index) =>               
+                  <p key={index}>{equipement}</p>           
                   )
                 }                 
               </Collapse>

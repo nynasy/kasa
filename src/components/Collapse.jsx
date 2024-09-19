@@ -17,8 +17,8 @@ function Collapse(props) {
                     {props.label}              
                 </div>
                 <div className="arrow" onClick={openClose}>
-                    {open && (<i class="fa fa-chevron-down"></i>)}
-                    {!open && (<i class="fa fa-chevron-up"></i>)}
+                    {open && (<i className="fa fa-chevron-down"></i>)}
+                    {!open && (<i className="fa fa-chevron-up"></i>)}
                 </div>
             </div>
             <div className="content">
