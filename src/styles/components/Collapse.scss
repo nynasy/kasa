@@ -1,5 +1,6 @@
 .collapse {
     width: 100%;
+    padding-bottom: 20px;
 
     .header {
         display: flex;
@@ -39,7 +40,6 @@
     }
 
     .content {
-        padding: 20px;
         text-align: justify;
         font-size: 18px;
         font-weight: 400;
@@ -52,6 +52,7 @@
         
         .open {
             background-color:#F6F6F673;
+            padding: 20px;
         }
 
         .close {
