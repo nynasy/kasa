@@ -20,8 +20,12 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;   
-    gap: 40px;  
+    gap: 50px;  
     width: 100%;
+    background-color:#F6F6F6;
+    border-radius: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
  
   
     @media screen and (max-width: 480px) {

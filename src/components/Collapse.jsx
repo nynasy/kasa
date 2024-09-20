@@ -7,6 +7,7 @@ function Collapse(props) {
 
     const openClose = () => {
         setOpen(!open);
+
        
     };   
 
@@ -17,12 +18,12 @@ function Collapse(props) {
                     {props.label}              
                 </div>
                 <div className="arrow" onClick={openClose}>
-                    {open && (<i className="fa fa-chevron-down"></i>)}
-                    {!open && (<i className="fa fa-chevron-up"></i>)}
+                    <i className={`fa fa-chevron-down ' ( ${open ? 'rotate' : ' rotate up'} )`}></i>
                 </div>
             </div>
             <div className="content">
-                {open && props.children}
+                {open && (<div className="open">{props.children}</div>)}
+                {!open && (<div className="close"></div>)}
             </div>
         </div>
     )
